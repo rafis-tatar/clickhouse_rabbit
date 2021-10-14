@@ -9,6 +9,7 @@ public static void Main(string[] args)
         int t= 0;
             Task.Run(()=>
                 {
+					try{
                     var factory = new ConnectionFactory() { HostName = "localhost", Port=5672, UserName="clickhouse", Password="clickhouse" };
                     using(var connection = factory.CreateConnection())
                     using(var channel = connection.CreateModel())
@@ -36,6 +37,12 @@ public static void Main(string[] args)
                             //Task.Delay(10);            
                         }
                     }
+					}
+					catch(Exception e)
+					{
+						Console.WriteLine(e.Message);
+					}
+					
                 }
             ).ContinueWith(delegate{
                 Console.WriteLine("complite : "+t);

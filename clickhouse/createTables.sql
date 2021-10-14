@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS default.cars (
+CREATE TABLE IF NOT EXISTS cars (
   device_id String,
   datetime DateTime,
   latitude Float32,
@@ -15,7 +15,7 @@ SETTINGS
   rabbitmq_exchange_name = 'exchange',
   rabbitmq_format = 'JSONEachRow';
 
-  CREATE TABLE IF NOT EXISTS default.cars_data_source (
+  CREATE TABLE IF NOT EXISTS cars_data_source (
     device_id String,
     datetime DateTime,
     latitude Float32,
@@ -28,5 +28,5 @@ SETTINGS
 ) ENGINE MergeTree()
   ORDER BY device_id;
 
-CREATE MATERIALIZED VIEW default.cars_view TO default.cars_data_source
-  AS SELECT * FROM default.cars;
+CREATE MATERIALIZED VIEW cars_view TO cars_data_source
+  AS SELECT * FROM cars;
