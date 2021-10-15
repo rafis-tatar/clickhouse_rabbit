@@ -11,11 +11,12 @@ CREATE TABLE IF NOT EXISTS cars (
 ) ENGINE = RabbitMQ
 SETTINGS
   rabbitmq_host_port = 'rabbit:5672',
+  rabbitmq_skip_broken_messages = 1,
   rabbitmq_routing_key_list = 'cars',
   rabbitmq_exchange_name = 'exchange',
   rabbitmq_format = 'JSONEachRow';
 
-  CREATE TABLE IF NOT EXISTS cars_data_source (
+CREATE TABLE IF NOT EXISTS cars_data_source (
     device_id String,
     datetime DateTime,
     latitude Float32,
