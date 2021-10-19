@@ -6,9 +6,9 @@ services:
     hostname: clickhouse   
     restart: always
     volumes:
-      - ./data/clickhouse/config.xml:/etc/clickhouse-server/config.xml
-      - ./data/clickhouse/rabbit-servers.xml:/etc/clickhouse-server/conf.d/rabbit-servers.xml
-      - ./data/clickhouse/db:/var/lib/clickhouse    
+      - ./clickhouse/config.xml:/etc/clickhouse-server/config.xml
+      - ./clickhouse/rabbit-servers.xml:/etc/clickhouse-server/conf.d/rabbit-servers.xml
+      - ./clickhouse/db:/var/lib/clickhouse    
     depends_on:
       - rabbit    
     ports:
@@ -29,7 +29,7 @@ services:
      hostname: rabbit
      restart: always
      volumes:
-      - ./data/rabbitmq:/var/lib/rabbitmq
+      - ./rabbitmq:/var/lib/rabbitmq
      environment:
         - RABBITMQ_DEFAULT_USER=user
         - RABBITMQ_DEFAULT_PASS=user
