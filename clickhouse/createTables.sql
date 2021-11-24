@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS audit_log_data_source (
     EventTime DateTime,
     Value String
 ) ENGINE MergeTree()
-  ORDER BY device_id;
+  ORDER BY EventTime;
 
 CREATE MATERIALIZED VIEW audit_log_view TO audit_log_data_source
   AS SELECT * FROM audit_log;

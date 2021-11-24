@@ -352,6 +352,6 @@ MigrationBackup/
 # VisualStudioCode 
 #.vscode/
 
-clickhouse/db
-rabbitmq/data
+clickhouse/data/*
+rabbitmq/data/*
 

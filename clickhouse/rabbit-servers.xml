@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <yandex>
 	<rabbitmq>
-		<username>audit_user</username>
-		<password>audit</password>
-		<vhost>audit</vhost>
+		<username>audit_logger</username>
+		<password>@uditPa$$#2021</password>
+		<vhost>/log</vhost>
 	</rabbitmq>
 </yandex>

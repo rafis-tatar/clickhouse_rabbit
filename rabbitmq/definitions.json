@@ -47,15 +47,7 @@
  ],
  "parameters": [],
  "policies": [],
- "queues": [  
-    {
-        "name":"logger",
-        "vhost":"/log",
-        "durable":true,
-        "auto_delete":false,
-        "arguments":{}
-    }
- ],
+ "queues": [],
  "exchanges": [],
  "bindings": []
 }
