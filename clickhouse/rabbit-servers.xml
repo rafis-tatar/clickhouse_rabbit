@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <yandex>
 	<rabbitmq>
-		<username>clickhouse</username>
-		<password>clickhouse</password>
+		<username>audit_user</username>
+		<password>audit</password>
 		<vhost>audit</vhost>
 	</rabbitmq>
 </yandex>

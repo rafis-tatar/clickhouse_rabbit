@@ -47,18 +47,12 @@
     <tmp_path>/var/lib/clickhouse/tmp/</tmp_path>
     <users_config>users.xml</users_config>
     <default_profile>default</default_profile>
-    <default_database>default</default_database>
-
-    <zookeeper incl="zookeeper-servers" optional="true" />
+    <default_database>default</default_database>  
 
     <macros incl="macros" optional="true" />
-
     <builtin_dictionaries_reload_interval>3600</builtin_dictionaries_reload_interval>
-
     <max_session_timeout>3600</max_session_timeout>
-
     <default_session_timeout>60</default_session_timeout>
-
     <query_log>
         <database>system</database>
         <table>query_log</table>

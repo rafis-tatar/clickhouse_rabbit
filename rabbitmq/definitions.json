@@ -1,0 +1,61 @@
+{
+ "rabbit_version": "3.6.6",
+ "users": [
+    {
+        "name": "admin",
+        "password_hash": "lXcxlsJfMxy9qb6bWnU3EHA74yNP7Zw5+7ZPzQMc4CwlU77I",
+        "hashing_algorithm": "rabbit_password_hashing_sha256",
+        "tags": "administrator"
+    },
+    {
+        "name": "audit_logger",
+        "password_hash": "akoFgedVypf/5MIof4EuTMw76wIMf/ncsS8JeFKuuXDwAQue",
+        "hashing_algorithm": "rabbit_password_hashing_sha256",
+        "tags": "logger"
+    }
+ ],
+ "vhosts": [ 
+     {
+        "name": "/"
+     },
+     {
+        "name": "/log"
+     }
+ ],
+ "permissions": [ 
+     {
+        "user": "admin",
+        "vhost": "/",
+        "configure": ".*",
+        "write": ".*",
+        "read": ".*"
+    },
+    {
+        "user": "admin",
+        "vhost": "/log",
+        "configure": ".*",
+        "write": ".*",
+        "read": ".*"
+    },
+    {
+        "user": "audit_logger",
+        "vhost": "/log",
+        "configure": ".*",
+        "write": ".*",
+        "read": ".*"
+    }
+ ],
+ "parameters": [],
+ "policies": [],
+ "queues": [  
+    {
+        "name":"logger",
+        "vhost":"/log",
+        "durable":true,
+        "auto_delete":false,
+        "arguments":{}
+    }
+ ],
+ "exchanges": [],
+ "bindings": []
+}
