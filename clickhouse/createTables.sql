@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS audit_log (
   ApplicationName String,
   ModuleName String,
   InstanceName String,
-  UserName String,
+  AccountName String,
   Guid UUID,
   EventTime DateTime,
   Value String
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS audit_log_data_source (
     ApplicationName String,
     ModuleName String,
     InstanceName String,
-    UserName String,    
+    AccountName String,    
     Guid UUID,
     EventTime DateTime,
     Value String

@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "Rabbit.Example": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "RABBIT_HOST": "localhost",
+        "RABBIT_PORT": "5672",
+        "RABBIT_USR": "audit_logger",
+        "RABBIT_PASS": "@uditPa$$#2021",
+        "RABBIT_VHOST": "/log",
+        "RABBIT_QUEUE": "audit",
+        "RABBIT_EXCHANGE": "exchange",
+        "RABBIT_ROUTINGKEY": "audit_log"
+      }
+    }
+  }
+}
