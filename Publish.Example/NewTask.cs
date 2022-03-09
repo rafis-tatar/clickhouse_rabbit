@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Rabbit.Publish;
+using TNCR.Audit;
 
 namespace RabbitPublish
 {
@@ -53,17 +54,19 @@ namespace RabbitPublish
         }
         private static void RunMethod()
         {
-            var audit = new AuditEvent()
+            var audit = new EventAudit()
             {
+                Guid = Guid.NewGuid(),
+
+                ApplicationName = "RabbitPublish",
+                ModuleName = string.Empty,
+                AccountName = "root",
+                InstanceName = "DEV",
+
                 EventType = EventType.CONTROLLER,
+                EventKind = EventKind.EVENT,
                 EventTime = DateTime.UtcNow,
                 EventName = "test",
-                InstanceName = "DEV",
-                ApplicationName = "RabbitPublish",
-                AccountName = "root",
-                Value = "some long text",
-                Guid = Guid.Empty,
-                ModuleName = string.Empty
             };
             var rabbitClick = serviceProvider.GetService<RabbitClickhouse>();
             rabbitClick.Publish(audit, _options);           

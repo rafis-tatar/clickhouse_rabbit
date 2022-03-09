@@ -1,4 +1,4 @@
-version: '2'
+version: '3.4'
 
 services:
   clickhouse-server:
@@ -12,7 +12,7 @@ services:
     depends_on:
       - rabbit    
     ports:
-      - 8123:8123  
+      - 8123:8123
       - 9000:9000
 
   tabix-client:

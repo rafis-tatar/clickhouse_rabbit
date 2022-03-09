@@ -1,31 +1,35 @@
 ﻿using System;
 
-namespace RabbitMQ.Client
+namespace TNCR.Audit
 {
     /// <summary>
     /// 
     /// </summary>
-    public interface IAuditEvent
+    public interface IAudit
     {
         /// <summary>
-        /// Тип события
+        /// Идентификатор события
         /// </summary>
-        EventType EventType { get; set; }
-        /// <summary>
-        /// Имя события
-        /// </summary>
-        string EventName { get; set; }
-        /// <summary>
-        /// Время события
-        /// </summary>
-       // DateTime EventTime { get; set; }
+        Guid Guid { get; set; }
+
         /// <summary>
         /// Наименование приложения инициировавшего событие
         /// </summary>
         string ApplicationName { get; set; }
+
+        /// <summary>
+        /// Наименование модуля инициировавшего событие
+        /// </summary>
+        string ModuleName { get; set; }
+
         /// <summary>
         /// Имя аккаунта от чео имени вызвано событие
         /// </summary>
         string AccountName { get; set; }
+
+        /// <summary>
+        /// Наименование ланшафта
+        /// </summary>
+        string InstanceName { get; set; }
     }
 }

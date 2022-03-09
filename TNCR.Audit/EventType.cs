@@ -1,36 +1,36 @@
 ﻿using System.Runtime.Serialization;
 
-namespace RabbitMQ.Client
+namespace TNCR.Audit
 {
+
+
     /// <summary>
     /// Тип события
     /// </summary>
     public enum EventType
     {
         /// <summary>
-        /// 
-        /// </summary>
-        [EnumMember(Value = "JOB")]
-        JOB,
-        /// <summary>
-        /// 
+        /// Событие формы
         /// </summary>
         [EnumMember(Value = "FORM")]
         FORM,
+
         /// <summary>
-        /// 
+        /// Событие задания
         /// </summary>
-        [EnumMember(Value = "TABLE")]
-        TABLE,
+        [EnumMember(Value = "JOB")]
+        JOB,
+
         /// <summary>
-        /// 
+        /// Событие контроллера
         /// </summary>
         [EnumMember(Value = "CONTROLLER")]
         CONTROLLER,
+
         /// <summary>
-        /// 
+        /// Событие аутентификации
         /// </summary>
-        [EnumMember(Value = "LOGIN")]
-        LOGIN
+        [EnumMember(Value = "AUTH")]
+        AUTH
     }
 }

@@ -1,12 +1,10 @@
-CREATE DATABASE IF NOT EXISTS audit;
-
 CREATE TABLE IF NOT EXISTS event (
 	Guid UUID,
 	EventType String,
 	EventKind String,
 	EventName String,
 	EventTime DateTime,	
-	Tag string,	
+	Tag String,	
 	ApplicationName String,
 	ModuleName String,
 	AccountName String,

@@ -37,6 +37,7 @@ namespace Rabbit.Publish
                 throw;
             }
         }
+
         public virtual void Publish<T>(T message, System.Text.Json.JsonSerializerOptions options =null) where T : new()
         {
             try
