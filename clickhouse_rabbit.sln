@@ -13,6 +13,10 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TNCR.Audit", "TNCR.Audit\TNCR.Audit.csproj", "{838795BC-9D29-46B7-9BE3-C20111BFD7FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TNCR.Audit.Event", "TNCR.Audit.Event\TNCR.Audit.Event.csproj", "{E0B5784F-875C-4DCF-A25E-A3B26B986CE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TNCR.Audit.Rabbit", "TNCR.Audit.Rabbit\TNCR.Audit.Rabbit.csproj", "{24BC164A-A784-42AD-AE1B-C0BBF3817181}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{838795BC-9D29-46B7-9BE3-C20111BFD7FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{838795BC-9D29-46B7-9BE3-C20111BFD7FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{838795BC-9D29-46B7-9BE3-C20111BFD7FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0B5784F-875C-4DCF-A25E-A3B26B986CE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0B5784F-875C-4DCF-A25E-A3B26B986CE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0B5784F-875C-4DCF-A25E-A3B26B986CE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0B5784F-875C-4DCF-A25E-A3B26B986CE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24BC164A-A784-42AD-AE1B-C0BBF3817181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24BC164A-A784-42AD-AE1B-C0BBF3817181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24BC164A-A784-42AD-AE1B-C0BBF3817181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24BC164A-A784-42AD-AE1B-C0BBF3817181}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,6 +17,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Rabbit.Publisher\Rabbit.Publisher.csproj" />
+    <ProjectReference Include="..\TNCR.Audit.Event\TNCR.Audit.Event.csproj" />
+    <ProjectReference Include="..\TNCR.Audit.Rabbit\TNCR.Audit.Rabbit.csproj" />
     <ProjectReference Include="..\TNCR.Audit\TNCR.Audit.csproj" />
   </ItemGroup>
 

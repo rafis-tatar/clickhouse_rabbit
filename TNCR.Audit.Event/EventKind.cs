@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace TNCR.Audit
+namespace TNCR.Audit.Event
 {
     /// <summary>
     /// Вид события

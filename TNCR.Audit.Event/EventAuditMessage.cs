@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Text.Json.Serialization;
 
-namespace TNCR.Audit
+namespace TNCR.Audit.Event
 {
     /// <summary>
     /// 
     /// </summary>
-    public record EventAudit : IAudit
+    public record EventAuditMessage : IProviderMessage
     {
         /// <summary>
         /// GUID для группировок связанных событий, не обязательный параметр.
@@ -17,21 +17,21 @@ namespace TNCR.Audit
         /// Наименование приложения инициировавшего событие
         /// </summary>
         public string ApplicationName { get; set; }
+
         /// <summary>
         /// Имя модуля
         /// </summary>
         public string ModuleName { get; set; }
+
         /// <summary>
         /// Тип экземпляра (DEV|PROD|STAGE и т.д.)
         /// </summary>
         public string InstanceName { get; set; }
+
         /// <summary>
         /// Имя аккаунта от чео имени вызвано событие
         /// </summary>
         public string AccountName { get; set; }
-
-
-
 
         /// <summary>
         /// Тип события

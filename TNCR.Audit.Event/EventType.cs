@@ -1,9 +1,7 @@
 ﻿using System.Runtime.Serialization;
 
-namespace TNCR.Audit
+namespace TNCR.Audit.Event
 {
-
-
     /// <summary>
     /// Тип события
     /// </summary>
